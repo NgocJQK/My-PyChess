@@ -1,9 +1,3 @@
-"""
-This file is a part of of My-PyChess application.
-
-In this file, we handle all sound related stuff.
-"""
-
 import os.path
 import time
 

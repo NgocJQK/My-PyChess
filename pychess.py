@@ -21,11 +21,6 @@ pygame.display.set_icon(MAIN.ICON)
 sngl = (260, 140, 220, 40)
 mult = (260, 200, 200, 40)
 onln = (260, 260, 120, 40)
-load = (260, 320, 200, 40)
-pref = (0, 450, 210, 40)
-abt = (390, 450, 110, 40)
-hwto = (410, 410, 90, 30)
-stok = (0, 410, 240, 30)
 
 def showMain(prefs):
     global cnt, img
