@@ -87,7 +87,6 @@ while run:
         win.blit(MAIN.ONLINE_H, onln[:2])
 
 
-    # Begin pygame event loop to catch all events
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
