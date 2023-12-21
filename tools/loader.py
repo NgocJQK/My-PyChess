@@ -167,19 +167,13 @@ class MAIN:
     MULTI = medium.render("Chơi với bạn", True, WHITE)
     ONLINE = medium.render("Chơi online", True, WHITE)
     LOAD = medium.render("Load Game", True, WHITE)
-    HOWTO = small.render("Howto", True, WHITE)
     ABOUT = medium.render("About", True, WHITE)
-    PREF = medium.render("Preferences", True, WHITE)
-    STOCK = small.render("Configure Stockfish", True, WHITE)
 
     SINGLE_H = medium.render("Chơi với máy", True, GREY)
     MULTI_H = medium.render("Chơi với bạn", True, GREY)
     ONLINE_H = medium.render("Chơi online", True, GREY)
     LOAD_H = medium.render("Load Game", True, GREY)
-    HOWTO_H = small.render("Howto", True, GREY)
     ABOUT_H = medium.render("About", True, GREY)
-    PREF_H = medium.render("Preferences", True, GREY)
-    STOCK_H = small.render("Configure Stockfish", True, GREY)
 
 class PREF:
     HEAD = large.render("Preferences", True, WHITE)
@@ -412,13 +406,7 @@ class ABOUT:
 
     with open(os.path.join("res", "texts", "about.txt"), "r") as f:
         TEXT = [vsmall.render(i, True, WHITE) for i in f.read().splitlines()]
-        
-class HOWTO:
-    HEAD = large.render("Chess Howto", True, WHITE)
-
-    with open(os.path.join("res", "texts", "howto.txt"), "r") as f:
-        TEXT = [vsmall.render(i, True, WHITE) for i in f.read().splitlines()]
-        
+                
 class TIMER:
     HEAD = large.render("Timer Menu", True, WHITE)
     

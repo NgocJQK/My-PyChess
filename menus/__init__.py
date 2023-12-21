@@ -4,7 +4,6 @@ In this file, we import a few modules for easy access for main file
 '''
 
 from menus.about import main as aboutmenu
-from menus.howto import main as howtomenu
 from menus.loadgame import main as loadgamemenu
 from menus.online import main as onlinemenu
 from menus.pref import main as prefmenu

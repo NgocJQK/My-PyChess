@@ -80,14 +80,11 @@ while run:
     if onln[0] < x < sum(onln[::2]) and onln[1] < y < sum(onln[1::2]):
         win.blit(MAIN.ONLINE_H, onln[:2])
 
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
 
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            # User has clicked somewhere, determine which button and
-            # call a function to handle the game into a different window.
             x, y = event.pos
 
             if sngl[0] < x < sum(sngl[::2]) and sngl[1] < y < sum(sngl[1::2]):
@@ -117,42 +114,6 @@ while run:
                 elif ret != 1:
                     run = chess.online(win, ret[0], ret[1], prefs, ret[1])
 
-            elif load[0] < x < sum(load[::2]) and load[1] < y < sum(load[1::2]):
-                sound.play_click(prefs)
-                ret = menus.loadgamemenu(win)
-                if ret == 0:
-                    run = False
-
-                elif ret != 1:
-                    if ret[0] == "multi":
-                        run = chess.multiplayer(win, *ret[1:3], prefs, ret[3])
-                    elif ret[0] == "single":
-                        run = chess.singleplayer(win, *ret[1:3], prefs, ret[3])
-                    elif ret[0] == "mysingle":
-                        run = chess.mysingleplayer(win, ret[1], prefs, ret[2])
-
-            elif pref[0] < x < sum(pref[::2]) and pref[1] < y < sum(pref[1::2]):
-                sound.play_click(prefs)
-                run = menus.prefmenu(win)
-                
-                prefs = menus.pref.load()
-                if music.is_playing():
-                    if not prefs["sounds"]:
-                        music.stop()
-                else:
-                    music.play(prefs)
-                    
-            elif hwto[0] < x < sum(hwto[::2]) and hwto[1] < y < sum(hwto[1::2]):
-                sound.play_click(prefs)
-                run = menus.howtomenu(win)
-
-            elif abt[0] < x < sum(abt[::2]) and abt[1] < y < sum(abt[1::2]):
-                sound.play_click(prefs)
-                run = menus.aboutmenu(win)
-
-            elif stok[0] < x < sum(stok[::2]) and stok[1] < y < sum(stok[1::2]):
-                sound.play_click(prefs)
-                run = menus.sfmenu(win)
 
     pygame.display.flip()
 
