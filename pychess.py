@@ -1,9 +1,3 @@
-"""
-This file is the main file of My-PyChess application.
-Run this file to launch the program.
-
-In this file, we handle the main menu which gets displayed at runtime.
-"""
 import sys  
 import pygame
 

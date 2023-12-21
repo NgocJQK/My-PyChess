@@ -136,9 +136,9 @@ class LOADGAME:
     GAME = small.render("Game", True, WHITE)
     TYPHEAD = vsmall.render("Game Type:", True, WHITE)
     TYP = {
-        "single": vsmall.render("SinglePlayer", True, WHITE),
-        "mysingle": vsmall.render("SinglePlayer", True, WHITE),
-        "multi": vsmall.render("MultiPlayer", True, WHITE),
+        "single": vsmall.render("Chơi với máy", True, WHITE),
+        "mysingle": vsmall.render("Chơi với máy", True, WHITE),
+        "multi": vsmall.render("Chơi với bạn", True, WHITE),
     }
     DATE = vsmall.render("Date-", True, WHITE)
     TIME = vsmall.render("Time-", True, WHITE)
@@ -163,18 +163,18 @@ class MAIN:
     ICON = pygame.image.load(os.path.join("res", "img", "icon.gif"))
     BG = [BGSPRITE.subsurface((i * 500, 0, 500, 500)) for i in range(4)]
 
-    SINGLE = medium.render("SinglePlayer", True, WHITE)
-    MULTI = medium.render("MultiPlayer", True, WHITE)
-    ONLINE = medium.render("Online", True, WHITE)
+    SINGLE = medium.render("Chơi với máy", True, WHITE)
+    MULTI = medium.render("Chơi với bạn", True, WHITE)
+    ONLINE = medium.render("Chơi online", True, WHITE)
     LOAD = medium.render("Load Game", True, WHITE)
     HOWTO = small.render("Howto", True, WHITE)
     ABOUT = medium.render("About", True, WHITE)
     PREF = medium.render("Preferences", True, WHITE)
     STOCK = small.render("Configure Stockfish", True, WHITE)
 
-    SINGLE_H = medium.render("SinglePlayer", True, GREY)
-    MULTI_H = medium.render("MultiPlayer", True, GREY)
-    ONLINE_H = medium.render("Online", True, GREY)
+    SINGLE_H = medium.render("Chơi với máy", True, GREY)
+    MULTI_H = medium.render("Chơi với bạn", True, GREY)
+    ONLINE_H = medium.render("Chơi online", True, GREY)
     LOAD_H = medium.render("Load Game", True, GREY)
     HOWTO_H = small.render("Howto", True, GREY)
     ABOUT_H = medium.render("About", True, GREY)
@@ -319,7 +319,7 @@ class ONLINEMENU:
     CONNECT = small.render("Connect", True, WHITE)
 
 class SINGLE:
-    HEAD = large.render("Singleplayer", True, WHITE)
+    HEAD = large.render("Chơi với máy", True, WHITE)
     SELECT = pygame.image.load(os.path.join("res", "img", "select.jpg"))
     CHOOSE = small.render("Choose:", True, WHITE)
     START = small.render("Start Game", True, WHITE)
